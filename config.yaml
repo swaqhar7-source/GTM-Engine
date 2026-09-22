@@ -1,0 +1,142 @@
+# ============================================================
+# GTM Engine configuration
+# Edit the numbers below to match YOUR product and market research.
+# Everything here is a starting assumption, not a fact.
+# ============================================================
+
+# --- Ideal Customer Profile keywords ---------------------------------
+# Words we expect to find on a good-fit company's website / news coverage.
+# Used for the "ICP keyword match" scoring signal. Edit freely.
+icp_keywords:
+  - cloud
+  - saas
+  - zero trust
+  - compliance
+  - soc
+  - siem
+  - vulnerability
+  - identity
+  - endpoint
+  - incident response
+  - managed security
+  - devsecops
+
+# --- News search signals ----------------------------------------------
+# Phrases appended to "<company name>" when searching Google News RSS.
+# Each hit is evidence the company is actively spending on / talking
+# about cybersecurity - a buying-intent signal.
+news_query_suffixes:
+  - "cybersecurity investment"
+  - "security funding"
+  - "data breach"
+  - "security partnership"
+  - "acquires cybersecurity"
+  - "CISO hire"
+  - "SOC 2"
+  - "compliance certification"
+
+news_lookback_days: 365   # only count articles newer than this
+
+# --- Lead scoring weights (0-100 total budget across signals) --------
+scoring_weights:
+  recent_cyber_news: 25       # any qualifying news hit in lookback window
+  news_volume: 15             # scaled by number of hits (capped)
+  is_public_company: 10       # found in SEC EDGAR (has an obligation to disclose spend/risk)
+  icp_keyword_match: 30       # scaled by number of distinct ICP keywords matched
+  has_wikipedia_profile: 5    # rough proxy for company maturity/size
+  employee_count_known: 15    # we found a usable size signal at all
+
+# Tier cut-offs applied to the final 0-100 score
+scoring_tiers:
+  hot: 65
+  warm: 35
+  # anything below "warm" is "cold"
+
+# --- Account-plan tiering (used by automate.py) ------------------------
+# Title keywords looked for in an attendee's designation. Match order
+# matters: hot beats warm beats cold. Edit these to match how YOUR
+# buyer's job titles are usually written.
+title_keywords_hot:      # a named title like this -> Hot tier
+  - ciso
+  - dpo
+title_keywords_warm:     # any of these -> Warm tier
+  - cyber
+  - cyber security
+  - cybersecurity
+  - security
+  - infosec
+  - information security
+  - compliance
+  - risk
+  - vulnerability
+  - appsec
+  - application security
+  - red team
+  - iam
+  - identity
+title_keywords_cold:     # only these, nothing warmer -> Cold tier (real
+  - devsecops           # interest, narrower cloud-security angle)
+  - secops
+  - soc analyst
+
+# Phrases to look for in a company's OWN scraped homepage/about text.
+# A hit means THEY sell something in this space - flag as a possible
+# competitor, peer, or channel partner instead of scoring them as a
+# normal lead. Automatic and keyword-based, so it will miss subtler
+# cases and occasionally false-positive - spot check before treating a
+# Flag as final.
+vendor_self_keywords:
+  - cybersecurity services
+  - managed security
+  - value added distributor
+  - value-added distributor
+  - mssp
+  - penetration testing services
+  - vapt
+  - soc-as-a-service
+  - cyber risk quantification
+  - identity and access management platform
+  - siem platform
+  - distributor of security
+  - endpoint protection platform
+  - encrypted email
+
+angle_by_keyword:        # first matching keyword group wins, top to bottom
+  - match: [ciso, dpo]
+    angle: "GRC/compliance or SIEM/SOC - direct to the named security/privacy leader."
+  - match: [iam, identity]
+    angle: "Identity & access management."
+  - match: [appsec, application security, red team]
+    angle: "AppSec / vulnerability management, cyber risk quantification."
+  - match: [compliance, risk]
+    angle: "GRC/compliance."
+  - match: [devsecops, secops, soc analyst]
+    angle: "Cloud security / DevSecOps tooling (CSPM, container/IaC security)."
+default_angle_with_signal: "General cybersecurity platform conversation - qualify further."
+default_angle_no_signal: "No security signal in attendee titles - needs individual research before an angle can be set."
+
+# --- TAM / SAM / SOM assumptions --------------------------------------
+# Bottom-up estimate = sum over the uploaded dataset only (your event's
+# companies), NOT the whole market. Combine with a top-down market-size
+# figure (from analyst reports, see README) for a real TAM.
+#
+# annual_security_spend_per_employee_usd: rough published benchmarks by
+# company-size bucket (source these properly before using in a real
+# board deck - defaults below are placeholders pulled from general
+# industry commentary, not a specific cited study).
+size_buckets:
+  micro:     { max_employees: 50,    annual_security_spend_per_employee_usd: 250 }
+  small:     { max_employees: 250,   annual_security_spend_per_employee_usd: 400 }
+  mid:       { max_employees: 2500,  annual_security_spend_per_employee_usd: 600 }
+  enterprise: { max_employees: null, annual_security_spend_per_employee_usd: 900 }
+
+default_employee_count_if_unknown: 250   # "small" bucket - conservative placeholder
+
+# Fraction of a company's total security spend that is realistically
+# addressable by YOUR product category (edit this to your category,
+# e.g. 0.05 for a narrow point solution, 0.25 for a broad platform).
+serviceable_addressable_fraction: 0.10
+
+# Fraction of SAM you can realistically capture in the next 12 months
+# given sales capacity, competition, etc.
+serviceable_obtainable_fraction: 0.02

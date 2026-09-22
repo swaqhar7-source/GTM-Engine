@@ -1,0 +1,414 @@
+<title>AppSec Live Pipeline</title>
+<meta name="description" content="Lead-scored, market-sized target account list from the AppSec Live 2026 Bengaluru attendee data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6F4EF;
+    --surface:#FFFFFF;
+    --surface-2:#EFEBE2;
+    --ink:#20241F;
+    --ink-muted:#5B6459;
+    --ink-faint:#8B948A;
+    --border:#DDD8CB;
+    --accent:#0E7C7B;
+    --accent-ink:#083F3F;
+    --accent-soft:#DCEFEC;
+    --hot:#C1442C;
+    --hot-soft:#F7E1DB;
+    --warm:#B9781F;
+    --warm-soft:#F5E7D2;
+    --cold:#5C6B74;
+    --cold-soft:#E7EBEC;
+    --flag:#7C5CBF;
+    --flag-soft:#EAE3F6;
+    --unenriched:#9A9488;
+    --unenriched-soft:#EDEAE1;
+    --shadow: 0 1px 2px rgba(32,36,31,.06), 0 8px 24px -12px rgba(32,36,31,.15);
+    --focus: #0E7C7B;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12211F;
+      --surface:#183330;
+      --surface-2:#1E3A36;
+      --ink:#EAF3F0;
+      --ink-muted:#A9C1BB;
+      --ink-faint:#7C9691;
+      --border:#2C4A44;
+      --accent:#4FD1C5;
+      --accent-ink:#DFFBF7;
+      --accent-soft:#1F4744;
+      --hot:#FF8A70;
+      --hot-soft:#4A2620;
+      --warm:#F0B961;
+      --warm-soft:#463519;
+      --cold:#9FB3B9;
+      --cold-soft:#26383B;
+      --flag:#B79AF0;
+      --flag-soft:#332959;
+      --unenriched:#8E998F;
+      --unenriched-soft:#26302A;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12211F;
+    --surface:#183330;
+    --surface-2:#1E3A36;
+    --ink:#EAF3F0;
+    --ink-muted:#A9C1BB;
+    --ink-faint:#7C9691;
+    --border:#2C4A44;
+    --accent:#4FD1C5;
+    --accent-ink:#DFFBF7;
+    --accent-soft:#1F4744;
+    --hot:#FF8A70;
+    --hot-soft:#4A2620;
+    --warm:#F0B961;
+    --warm-soft:#463519;
+    --cold:#9FB3B9;
+    --cold-soft:#26383B;
+    --flag:#B79AF0;
+    --flag-soft:#332959;
+    --unenriched:#8E998F;
+    --unenriched-soft:#26302A;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    padding-inline:20px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px; margin:0 auto; padding-block:28px 60px;}
+  h1,h2,h3{font-family:"Fraunces",Georgia,serif; text-wrap:balance; margin:0;}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums;}
+
+  header.top{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    gap:16px; flex-wrap:wrap; margin-bottom:28px;
+  }
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--accent); margin-bottom:8px; display:flex;
+    align-items:center; gap:8px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+  h1{font-size:clamp(26px,4vw,36px); font-weight:600; color:var(--ink);}
+  .sub{color:var(--ink-muted); font-size:14.5px; margin-top:6px; max-width:60ch; line-height:1.5;}
+  .source-tag{
+    font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-faint);
+    border:1px solid var(--border); border-radius:8px; padding:8px 12px; background:var(--surface);
+    max-width:280px; line-height:1.5;
+  }
+
+  .stats{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:12px; margin-bottom:22px;
+  }
+  .stat{
+    background:var(--surface); border:1px solid var(--border); border-radius:12px;
+    padding:16px 18px; box-shadow:var(--shadow);
+  }
+  .stat .label{font-size:11.5px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:.06em;}
+  .stat .value{font-family:"IBM Plex Mono",monospace; font-size:26px; font-weight:600; margin-top:6px; letter-spacing:-.01em;}
+  .stat .value small{font-size:13px; font-weight:500; color:var(--ink-muted); font-family:"IBM Plex Sans",sans-serif;}
+  .stat.hot .value{color:var(--hot);}
+
+  .panel{
+    background:var(--surface); border:1px solid var(--border); border-radius:14px;
+    box-shadow:var(--shadow); margin-bottom:22px; overflow:hidden;
+  }
+  .panel-head{padding:16px 18px 4px; display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px;}
+  .panel-head h2{font-size:16px; font-weight:600;}
+  .panel-head .note{font-size:12px; color:var(--ink-faint);}
+  .panel-body{padding:6px 18px 18px;}
+
+  /* tier distribution bar */
+  .tierbar{display:flex; height:28px; border-radius:7px; overflow:hidden; border:1px solid var(--border);}
+  .tierbar div{display:flex; align-items:center; justify-content:center; font-size:11px; font-family:"IBM Plex Mono",monospace; color:var(--surface); min-width:0; white-space:nowrap; overflow:hidden;}
+  .tierlegend{display:flex; gap:16px; margin-top:10px; flex-wrap:wrap;}
+  .tierlegend span{display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--ink-muted);}
+  .swatch{width:10px;height:10px;border-radius:3px;display:inline-block;}
+
+  .controls{
+    display:flex; gap:8px; flex-wrap:wrap; align-items:center; padding:14px 18px 0;
+  }
+  .chip{
+    border:1px solid var(--border); background:var(--surface-2); color:var(--ink-muted);
+    padding:6px 12px; border-radius:999px; font-size:13px; cursor:pointer; user-select:none;
+    font-family:"IBM Plex Mono",monospace; transition:background .12s,color .12s,border-color .12s;
+  }
+  .chip[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:var(--surface);}
+  .search{
+    margin-left:auto; position:relative; flex:1 1 200px; max-width:280px;
+  }
+  .search input{
+    width:100%; padding:7px 12px; border-radius:999px; border:1px solid var(--border);
+    background:var(--surface); color:var(--ink); font-size:13px; font-family:inherit;
+  }
+  .search input:focus{outline:2px solid var(--focus); outline-offset:1px;}
+
+  .tablewrap{overflow-x:auto; margin-top:10px;}
+  table{width:100%; border-collapse:collapse; font-size:13.5px; min-width:760px;}
+  thead th{
+    text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.05em;
+    color:var(--ink-faint); font-weight:600; padding:8px 10px; border-bottom:1px solid var(--border);
+    position:sticky; top:0; background:var(--surface); cursor:pointer; white-space:nowrap;
+  }
+  thead th:hover{color:var(--ink);}
+  thead th.sorted{color:var(--accent);}
+  tbody tr{border-bottom:1px solid var(--border);}
+  tbody tr:hover{background:var(--surface-2);}
+  tbody tr.expandable{cursor:pointer;}
+  td{padding:9px 10px; vertical-align:top; color:var(--ink);}
+  td.company{font-weight:600;}
+  td.domain{color:var(--ink-faint); font-family:"IBM Plex Mono",monospace; font-size:12px;}
+  td.num{font-family:"IBM Plex Mono",monospace; text-align:right;}
+  .pill{
+    display:inline-block; padding:3px 9px; border-radius:999px; font-size:11.5px;
+    font-family:"IBM Plex Mono",monospace; font-weight:600; white-space:nowrap;
+  }
+  .pill.hot{background:var(--hot-soft); color:var(--hot);}
+  .pill.warm{background:var(--warm-soft); color:var(--warm);}
+  .pill.cold{background:var(--cold-soft); color:var(--cold);}
+  .pill.flag{background:var(--flag-soft); color:var(--flag);}
+  .pill.unenriched{background:var(--unenriched-soft); color:var(--unenriched);}
+  .note-row td{padding:0 10px 14px 10px; color:var(--ink-muted); font-size:12.5px; line-height:1.5; background:var(--surface-2);}
+  .note-row .inner{padding:10px 12px; border-left:2px solid var(--accent);}
+  .kw{display:inline-block; background:var(--accent-soft); color:var(--accent-ink); border-radius:5px; padding:1px 6px; font-size:11px; margin:2px 3px 0 0; font-family:"IBM Plex Mono",monospace;}
+  .chev{display:inline-block; width:14px; color:var(--ink-faint); transition:transform .15s;}
+  tr[aria-expanded="true"] .chev{transform:rotate(90deg);}
+  caption{caption-side:bottom; text-align:left; font-size:11.5px; color:var(--ink-faint); padding:10px 2px 0;}
+
+  footer{margin-top:30px; font-size:12px; color:var(--ink-faint); line-height:1.6;}
+  footer a{color:var(--accent);}
+
+  @media (max-width:640px){
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .search{max-width:none; flex:1 1 100%;}
+  }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>GTM Account Plans — Live Output</div>
+      <h1>AppSec Live 2026, Bengaluru</h1>
+      <div class="sub">185 companies from the event's real attendee list. 184 have a researched company identity; 90 have a security-relevant title in their attendee list driving a specific angle for a broader cybersecurity platform (SIEM/SOC, cloud security, identity, GRC/compliance, cyber risk quantification). Ranked by attendee title relevance, not just delegation size.</div>
+    </div>
+    <div class="source-tag">SOURCE<br><strong id="src-count">—</strong> attendee rows → <strong id="src-companies">—</strong> unique companies<br>Bengaluru · 3 Sept 2026</div>
+  </header>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Account tier distribution</h2>
+      <div class="note">of 185 companies</div>
+    </div>
+    <div class="panel-body">
+      <div class="tierbar" id="tierbar"></div>
+      <div class="tierlegend" id="tierlegend"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Account plans</h2>
+      <div class="note">click a row for the full plan · click a column to sort</div>
+    </div>
+    <div class="controls" id="controls">
+      <div class="search"><input id="search" type="search" placeholder="Search company or domain…" aria-label="Search companies"></div>
+    </div>
+    <div class="panel-body">
+      <div class="tablewrap">
+        <table id="table">
+          <caption>"No Signal" = we know what the company does, but no security-relevant title turned up in their attendee list — not the same as "not interesting," just no confirmed angle yet.</caption>
+          <thead>
+            <tr>
+              <th data-key="tier">Tier</th>
+              <th data-key="company">Company</th>
+              <th data-key="domain">Domain</th>
+              <th data-key="attendee_count" class="num">Attendees</th>
+              <th data-key="what_they_do">What they do</th>
+              <th data-key="recommended_angle">Recommended angle</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Built with the GTM Enrichment Engine. Tiers: <strong>Hot</strong> = named CISO/DPO in attendee list or very strong external signal · <strong>Warm</strong> = other security-relevant title or credible signal · <strong>Cold</strong> = DevSecOps/SecOps-only title (real, but a narrower cloud-security angle) · <strong>Flag</strong> = competitor/peer or channel/distributor, route to partnerships not sales · <strong>No Signal</strong> = company identity is researched, but no security-relevant title turned up in their attendee list. "Attendee count" is a weak priority signal on its own — DP World has 1 attendee and is one of the strongest leads in the whole list.
+  </footer>
+</div>
+
+<script id="dashboard-data" type="application/json">__DATA_JSON__</script>
+<script>
+(function(){
+  "use strict";
+  var DATA = JSON.parse(document.getElementById('dashboard-data').textContent);
+  var companies = DATA.companies;
+
+  document.getElementById('src-count').textContent = '854';
+  document.getElementById('src-companies').textContent = companies.length;
+
+  var tierOrder = ['Hot','Warm','Cold','Flag','No Signal'];
+  var tierClass = {Hot:'hot', Warm:'warm', Cold:'cold', Flag:'flag', 'No Signal':'unenriched'};
+  var tierColorVar = {Hot:'--hot', Warm:'--warm', Cold:'--cold', Flag:'--flag', 'No Signal':'--unenriched'};
+
+  // ---- stat tiles ----
+  var hotCount = companies.filter(function(c){return c.tier==='Hot';}).length;
+  var warmCount = companies.filter(function(c){return c.tier==='Warm';}).length;
+  var researchedCount = companies.filter(function(c){return c.tier!=='No Signal';}).length;
+  var stats = [
+    {label:'Unique companies', value: companies.length, sub:'from 854 attendee rows'},
+    {label:'Researched so far', value: researchedCount, sub: (researchedCount/companies.length*100).toFixed(0)+'% of list'},
+    {label:'Hot accounts', value: hotCount, sub:'named CISO/DPO or strong signal', cls:'hot'},
+    {label:'Warm accounts', value: warmCount, sub:'other security-relevant signal'},
+  ];
+  var statsEl = document.getElementById('stats');
+  stats.forEach(function(s){
+    var d = document.createElement('div');
+    d.className = 'stat' + (s.cls?(' '+s.cls):'');
+    d.innerHTML = '<div class="label">'+s.label+'</div><div class="value">'+s.value+' <small>'+s.sub+'</small></div>';
+    statsEl.appendChild(d);
+  });
+
+  // ---- tier distribution bar ----
+  var counts = {};
+  tierOrder.forEach(function(t){counts[t]=0;});
+  companies.forEach(function(c){counts[c.tier] = (counts[c.tier]||0)+1;});
+  var bar = document.getElementById('tierbar');
+  var legend = document.getElementById('tierlegend');
+  tierOrder.forEach(function(t){
+    var pct = counts[t]/companies.length*100;
+    if(pct <= 0) return;
+    var seg = document.createElement('div');
+    seg.style.width = pct + '%';
+    seg.style.background = 'var(' + tierColorVar[t] + ')';
+    seg.textContent = pct > 6 ? (counts[t]+' '+t) : '';
+    seg.title = t + ': ' + counts[t] + ' companies (' + pct.toFixed(1) + '%)';
+    bar.appendChild(seg);
+
+    var li = document.createElement('span');
+    li.innerHTML = '<span class="swatch" style="background:var('+tierColorVar[t]+')"></span>'+t+' · '+counts[t];
+    legend.appendChild(li);
+  });
+
+  // ---- table ----
+  var tbody = document.getElementById('tbody');
+  var state = { sortKey:'tier', sortDir:'asc', filter:'all', q:'' };
+  var tierRank = {Hot:0, Warm:1, Cold:2, Flag:3, 'No Signal':4};
+
+  function passesFilter(c){
+    if(state.filter !== 'all' && c.tier !== state.filter) return false;
+    if(state.q){
+      var q = state.q.toLowerCase();
+      if(c.company.toLowerCase().indexOf(q) === -1 && (!c.domain || c.domain.toLowerCase().indexOf(q) === -1)) return false;
+    }
+    return true;
+  }
+
+  function esc(s){
+    var d = document.createElement('div');
+    d.textContent = s == null ? '' : s;
+    return d.innerHTML;
+  }
+
+  function render(){
+    var rows = companies.filter(passesFilter).slice();
+    rows.sort(function(a,b){
+      var k = state.sortKey, dir = state.sortDir === 'asc' ? 1 : -1;
+      var av = a[k], bv = b[k];
+      if(k === 'tier'){ av = tierRank[a.tier]; bv = tierRank[b.tier]; }
+      if(av == null && bv == null) return 0;
+      if(av == null) return 1;
+      if(bv == null) return -1;
+      if(typeof av === 'string') return av.localeCompare(bv) * dir;
+      return (av - bv) * dir;
+    });
+
+    tbody.innerHTML = '';
+    rows.forEach(function(c){
+      var tr = document.createElement('tr');
+      tr.className = 'expandable';
+      tr.setAttribute('aria-expanded','false');
+      tr.innerHTML =
+        '<td><span class="pill '+tierClass[c.tier]+'">'+esc(c.tier)+'</span></td>'+
+        '<td class="company"><span class="chev">▸</span>'+esc(c.company)+'</td>'+
+        '<td class="domain">'+esc(c.domain||'—')+'</td>'+
+        '<td class="num">'+c.attendee_count+'</td>'+
+        '<td>'+esc(c.what_they_do||'—')+'</td>'+
+        '<td>'+esc(c.recommended_angle||'—')+'</td>';
+
+      var noteTr = document.createElement('tr');
+      noteTr.className = 'note-row';
+      noteTr.hidden = true;
+      var flagHtml = c.flag ? '<div style="margin-top:6px"><span class="kw" style="background:var(--flag-soft);color:var(--flag)">⚠ '+esc(c.flag)+'</span></div>' : '';
+      noteTr.innerHTML = '<td colspan="6"><div class="inner">'+
+        '<strong>Attendees:</strong> '+esc(c.attendees||'—')+'<br><br>'+
+        '<strong>Signal:</strong> '+esc(c.signal||'—')+'<br><br>'+
+        '<strong>Research depth:</strong> '+esc(c.research_depth||'—')+
+        flagHtml+
+        '</div></td>';
+
+      tr.addEventListener('click', function(){
+        var open = tr.getAttribute('aria-expanded') === 'true';
+        tr.setAttribute('aria-expanded', open ? 'false' : 'true');
+        noteTr.hidden = open;
+      });
+
+      tbody.appendChild(tr);
+      tbody.appendChild(noteTr);
+    });
+  }
+
+  // controls: tier chips
+  var controls = document.getElementById('controls');
+  var filters = [['all','All'],['Hot','Hot'],['Warm','Warm'],['Cold','Cold'],['Flag','Flag'],['No Signal','No Signal']];
+  filters.forEach(function(f, i){
+    var chip = document.createElement('button');
+    chip.className = 'chip';
+    chip.type = 'button';
+    chip.textContent = f[1];
+    chip.setAttribute('aria-pressed', i===0 ? 'true' : 'false');
+    chip.addEventListener('click', function(){
+      Array.prototype.forEach.call(controls.querySelectorAll('.chip'), function(el){el.setAttribute('aria-pressed','false');});
+      chip.setAttribute('aria-pressed','true');
+      state.filter = f[0];
+      render();
+    });
+    controls.insertBefore(chip, controls.querySelector('.search'));
+  });
+
+  document.getElementById('search').addEventListener('input', function(e){
+    state.q = e.target.value;
+    render();
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('thead th[data-key]'), function(th){
+    th.addEventListener('click', function(){
+      var key = th.getAttribute('data-key');
+      if(state.sortKey === key){
+        state.sortDir = state.sortDir === 'asc' ? 'desc' : 'asc';
+      } else {
+        state.sortKey = key;
+        state.sortDir = 'desc';
+      }
+      Array.prototype.forEach.call(document.querySelectorAll('thead th'), function(t){t.classList.remove('sorted');});
+      th.classList.add('sorted');
+      render();
+    });
+  });
+
+  render();
+})();
+</script>

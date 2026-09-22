@@ -1,0 +1,168 @@
+company,domain,domain_source,attendee_count,attendees,signal_score,signal_keywords
+Aliceblue,aliceblueonline.com,attendee_email,1,Dr.Navaneethan (CISO and DPO),7,"ciso, dpo"
+Rakuten India,rakuten.com,attendee_email,2,Prasannakumar G K (CISO); Mourish Shamugam (Project Manager - Information Security ),6,"ciso, information security, security"
+Exotel,exotel.com,attendee_email,1,Anvesh Y. (VP- Information Security & IT(CISO)),6,"ciso, information security, security"
+Unisys,unisys.com,attendee_email,3,"Satyabrata Pani (Principal Cybersecurity); Girish kumar MN (Sr. Director - Cyber Security); Basanth H B (Leader - Cyber Security, Cloud Applications and Infrastructure Solutions)",5,"cyber, cyber security, cybersecurity, security"
+AT&T,intl.att.com,attendee_email,2,Rajesh Yellapu (Senior Specalist Cybersecurity Platfroms); Bhramara Malleswar B (Sr Specialist Tech Compliance),5,"compliance, cyber, cybersecurity, security"
+Envoy Global,envoyglobal.com,attendee_email,2,Mrunal Vemaraju  ( Red Team Analyst); Rohit Ponnapalli  (CISO),5,"ciso, red team"
+Cumulocity,cumulocity.com,attendee_email,1,Saran Govindarajan (CISO | Security Architect | Cumulocity IoT),5,"ciso, security"
+Exeevo,exeevo.com,attendee_email,1,Anwar Akhtar (Information Security officer (ISO/DPO)),5,"dpo, information security, security"
+OLYV,smartcoin.co.in,attendee_email,1,Madan M (CISO infosec),5,"ciso, infosec"
+Criticalog India Pvt Ltd,criticalog.com,attendee_email,2,Indranil Guha (CISO); Sireesh Beemineni (GENERAL MANAGER IT),4,ciso
+Alten India Pvt.Ltd,alten.com,attendee_email,1,Nareshkumar Balakrishnan (CISO),4,ciso
+Apollo Groups,,not_found,1,Fahad Khan (CISO),4,ciso
+Astera Labs,,not_found,1,Rushabh Pinesh Mehta (Cybersecurity and Data Protection Leader),4,"cyber, cybersecurity, security"
+Aurobindo Pharma Limited,aurobindo.com,attendee_email,1,Vinu Chandran (CISO),4,ciso
+Cleartax,rulebound.ai,attendee_email,1,Ayush Gupta (Global DPO & Security Lead),4,"dpo, security"
+Covalensedigital solutions,covalensedigital.com,attendee_email,1,Nagaraju C (CISO),4,ciso
+DMI Finance Private Limited,dmifinance.in,attendee_email,1,Manikant R Singh (SVP & CISO),4,ciso
+Diageo,diageo.com,attendee_email,1,Ishita De (CISO),4,ciso
+Essentra,essentra.com,attendee_email,1,Kiran Kumar Baskar (Head of Cyber Security),4,"cyber, cyber security, security"
+Frontline FinTech,techfrontline.com,attendee_email,1,Satish Kumar Dwibhashi (CIO & CISO ),4,ciso
+Jazzman,jazzx.ai,attendee_email,1,Swathi Kanthraj (CISO),4,ciso
+Kanerika,kanerika.con,attendee_email,1,Lalit Rawat (CISO),4,ciso
+Ramoji Group,,not_found,1,Raghav Grandhi (Group CISO ),4,ciso
+TATA ELXSI,tataelxsi.co.in,attendee_email,1,PakeeraReddy Yetigadda (Cybersecurity Specialist),4,"cyber, cybersecurity, security"
+Tata Elxsi,tataelxsi.co.in,attendee_email,1,Balamurali Palaniyandi (Offering Lead - Cybersecurity),4,"cyber, cybersecurity, security"
+Zanmai labs pvt ltd,,not_found,1,Kaushlendr Partap (CISO),4,ciso
+Jana Bank (Janalakshmi financial services),jana.bank.in,attendee_email,1,N Krishna Chaitanya (Associate Vice President - Lead GRC & Information Security Risk),3,"information security, risk, security"
+Amadeus,amadeus.com,attendee_email,3,Vishwanath Bogguram VENKATACHALAPATHI (SENIOR DIRECTOR - ENGINEERING); Puneet Goyal (Lead Principal Specialist - Information Security); pushkar Nath Jha (Director of Engineering),2,"information security, security"
+Discover Dollar,discoverdollar.com,attendee_email,3,"Ankit Prakash (Team Lead, Software Engineer); Abdul Rahman Muhammadi (Manager - Information Security & IT); Jessica  Kour (Assoc Program Manager)",2,"information security, security"
+Meesho,meesho.com,attendee_email,3,Utkarsh Tiwari (Head of Security Engineering & Compliance); Vibhuti Narayan Patel (Software Development Engineer - II); Arijit Mondal (Security Engineer - II),2,"compliance, security"
+ABB,in.abb.com,attendee_email,1,Sourav Mishra (Principal DevOps & DevSecOps  Architect),2,"devsecops, secops"
+Genpact,genpact.com,attendee_email,1,Priyaranjan Samal (Director - Global Information Security),2,"information security, security"
+Happiest Minds Technologies,happiestminds.com,attendee_email,1,Melvin John (Director - Global Practice Head of Threat & Vulnerability Management and Cloud Security),2,"security, vulnerability"
+Indian Air Force,,not_found,1,Hemadri Bhatt (Associate Director- Information Security and IT Governance),2,"information security, security"
+Korn Ferry International,kornferry.com,attendee_email,1,Vikee  (Devsecops and release architect),2,"devsecops, secops"
+LTIMindtree,ltm.com,attendee_email,1,"Nagesh Gurikar (
+Global Practice Head - DevSecOps & SRE)",2,"devsecops, secops"
+Lumen Technologies India Pvt Ltd,lumen.com,attendee_email,1,Ravishankar Joshi (DevSecops Lead),2,"devsecops, secops"
+PropertyGuru Group,propertyguru.tech,attendee_email,1,Krishna Pandey (Chief Information Security Officer),2,"information security, security"
+Wells Fargo,,not_found,1,"Sabyasachi Dhal (Executive Director, Application Security)",2,"application security, security"
+Greytip Software Pvt. Ltd.,greytip.com,attendee_email,3,Paladugu Narasimha Rao (Architech - SecOps); Nutheti Manoj Kumar (Associate Architect-SecOps); Abhishek Gaurav (Senior Director engineering),1,secops
+Chargebee,chargebee.com,attendee_email,2,Arun Agrawalla (Head of Dynamic Security); Suneel Singh (Head of Product security),1,security
+Keka HR,jeka.com,attendee_email,2,Varun Khurana (Director of Engineering); Nitish Upadhyay (Director Security),1,security
+Tredence,tredence.com,attendee_email,2,Dasari Suresh Kumar (Senior Cloud Architect – Platform Engineering); Vivin Gangadharan (TPM - Security Engineering),1,security
+Cognizant Technology Solutions,cognizant.com,attendee_email,1,Venkatesh Ps (Director - Global Business Resiliance - Corporate Security),1,security
+Ephicacy Lifescience Analytics,ephicacy.com,attendee_email,1,Maqsood Pasha (Global Head IT & Security),1,security
+Fis goobal,,not_found,1,Swetha  (Security consultant ),1,security
+Honeywell Technology Solutions,,not_found,1,Pradeep Kishore (Director of Product Security ),1,security
+Indecomm Business Services,,not_found,1,abhishek bharadvaj (AppSec Engineer),1,appsec
+Liminal,lmnl.app,attendee_email,1,Vanshit Malhotra (Director - Infosec),1,infosec
+Marvell Technology,,not_found,1,Rajender Singh (Director - Enterprise Security),1,security
+Nestle,,not_found,1,Ravi Kanth Chava (Technology Security Leader),1,security
+Shell,shell.com,attendee_email,1,Abhinav Verma (Enterprise Risk Service Manager),1,risk
+Toyota connected India,toyotaconnected.co.in,attendee_email,1,Mohammed Siyam (AppSec Lead),1,appsec
+Triveni Turbine Ltd,ttlindia.net,attendee_email,1,R Subramaniam,1,iam
+WD,wdc.com,attendee_email,1,sathiyamoorthy subramaniam,1,iam
+Wells fargo,,not_found,1,Neha (VP Infosec),1,infosec
+[24]7.ai,247.ai,attendee_email,1,Ankan Jha (Senior Data/Security Manager),1,security
+Epsilon,epsilon.com,attendee_email,3,Jagadesh Kiran (Director of engineering); Swapna (Architect); Eshwaraj Kudugunti (Director IT),0,
+Happiest Minds,happiestminds.com,attendee_email,3,Rakesh Sahu (Director of Engineering); Shashikumar V (TECHNICAL LEAD / Solution Specialist); Mohamed Fahd (SENIOR PRACTICE MANAGER),0,
+Media.Net,media.net,attendee_email,3,Vaisakh Balasubramanian (Sr EM); Rajat Goyal (Engineering Manager); Akash A. (VP of Engineering),0,
+Moder Solutions India Pvt. Ltd,gomoder.com,attendee_email,3,Vijay Kumar Prabhakar (Vice President ); Mithun HG (Director of Engineering); Saravana Kumar Rajiah (Vice President ),0,
+PayU,payu.in,attendee_email,3,Ankush Pokarana; Harsh (Engineering Manager); Mohan Krishna (Senior Director),0,
+Raksha Technologies,raksha.co.in,attendee_email,3,Akilesh Chandhoke; Vaidy Iyer ; Prasun Shree,0,
+Tesco,tesco.com,attendee_email,3,Deepa T (Product Manager); Jagadeesh Jeeva (Head of Software Development); Prabhakaran R (Senior software engg ),0,
+Western Digital,wdc.com,attendee_email,3,"Pavan Gururaj (Senior Manager); Dinesh Babu (Senior Manager ); Sridhar Sabesan (Senior Director, Engineering)",0,
+Blubirch,blubirch.com,attendee_email,2,"Amruth Dariya (Director, Quality assurance); Jithendran CK (CTO)",0,
+Bright Money,brightmoney.co,attendee_email,2,Sanjana (Senior DevOps Engineer ); Ayush Omer (Senior DevOps Engineer ),0,
+Motorola Mobility(A Lenovo Company),motorola.com,attendee_email,2,"Jilji Elayath (Director, SW Engineering); Rachana G N (Motorola India R&D HR Leader)",0,
+Nielsen,nielsen.com,attendee_email,2,Kiran Kumaar Sathyanarayana (Director of Engineering); NAGMA S (Product engineering ),0,
+Omega Healthcare Management Services,omegahms.com,attendee_email,2,Rudra patil  (Team Manager ); Jeevitha Pothuri,0,
+Property Guru,propertyguru.tech,attendee_email,2,Sadiq Maricar (Senior manager); Sadiq Maricar (Senior manager),0,
+Radisys India Ltd,radisys.com,attendee_email,2,Dinesh Kalidindi (Technical Specialist(Architect)); Sabyasachi Hembram (Director Engineering),0,
+Schneider Electric,se.com,attendee_email,2,Srivatsan Mohan (Senior DevOps Engineer); Rishil Verma (Enterprise Architect),0,
+Shadowfax Technologies,shadowfax.in,attendee_email,2,Srinivas Nadageri (Devops Developer ); Shuchith B U (Devops),0,
+Valeo Health,feelvaleo.com,attendee_email,2,Raj Singh (Head of operations); Abhishek Jain (Chief Technical Officer),0,
+World Wide Technology,wwt.com,attendee_email,2,Vijay Ganesh (Director Engineering Services); Navneet Jha (Senior Manager Engineering services and Technical Delivery),0,
+Zoomcar,zoomcar.com,attendee_email,2,Himanshu Chaudhary (Head Of Devops); Nagaraj Rao (Head IT),0,
+22by7,22by7.in,attendee_email,1,Sri Varan (Manager),0,
+6D Technologies,6dtech.co.in,attendee_email,1,Dr. Nikhil Paul (CTIO),0,
+Acko,acko.tech,attendee_email,1,Vaibhav Magon (VP of Engineering),0,
+Agilon Health,,not_found,1,Doddappa Sheelvant (Head of Engineering),0,
+Alliance Pro IT pvt ltd,allianceproit.com,attendee_email,1,Rahul Kumar (client engagement manager),0,
+Alliance pro it Pvt Ltd,alliancroroit.com,attendee_email,1,Suresh.t (Branch manager ),0,
+Angel One,angelone.in,attendee_email,1,Nishant Chandra (SVP Engineering),0,
+BGSW,in.bosch.com,attendee_email,1,Atul Gohad  (Chief AI Officer - CIO Office),0,
+BHEL,,not_found,1,Jayadev Kadur (Sr Manager -IT ),0,
+BIAL,bialairport.com,attendee_email,1,PH Reddy (Head of MXDR Operations),0,
+BluSpring,bluspring.com,attendee_email,1,Gaurav Mishra (Chief Technology Officer),0,
+Bosch,in.bosch.com,attendee_email,1,Srinivas Dhondi (Enterprise Architect ),0,
+Bosch Global Software Technologies Pvt Ltd,in.bosch.com,attendee_email,1,Ganesh Mahadevan Vaidyanathan (Chief Information Officer / Chief Data Officer),0,
+Bright money,brightmoney.co,attendee_email,1,Raja Kadali  (SRE-III ),0,
+Capgemini,,not_found,1,Murthy S Kadam (Sr Technical manager ),0,
+Captain Fresh,captainfresh.com,attendee_email,1,Dr. Kumar Saurabh (Chief Information Officer),0,
+Carborundum Universal,cumi.murugappa.com,attendee_email,1,Shyam Rao (CTO),0,
+Checkmarx,,not_found,1,Bhawani Singh (Director Solution Engineering),0,
+Cisco,cisco.com,attendee_email,1,"Mohammed Abdul Khadeer (DevOps Head, APAC Region)",0,
+Cogos Technologies Pvt Ltd,cogostech.com,attendee_email,1,Goutham Kumar BV (CTO),0,
+ConcertAI,,not_found,1,Nagaraj honkote (VP Product),0,
+Coupa,coupa.com,attendee_email,1,Sumit Srivastava (Director Cloud Platform Engineering),0,
+EY,,not_found,1,Srinivas Mahakud (Head of Engineering & GenAI Practice | Associate Director ),0,
+Edubestu,edubestu.com,attendee_email,1,Prabhash Mishra (Head of Engineering ),0,
+Encycdata,,not_found,1,Lingesh M (Managing Director & VP Engineering and Services),0,
+Entrust,entrust.com,attendee_email,1,Ankit Mehra,0,
+Esecforte,,not_found,1,Mohit,0,
+Everforth Quinnox,,not_found,1,Pavana G (Manager),0,
+FIS,fisglobal.com,attendee_email,1,Rohit Ramanand (Senior Vice President of Engineering),0,
+FSS,fsstech.com,attendee_email,1,Sumit Agarwal (AVP - Technology Architecture),0,
+Fi Money,epifi.com,attendee_email,1,Prasanna Ranganathan (CTO),0,
+Fivetran,fivetran.com,attendee_email,1,Vikash Kumar (Head of Engineering),0,
+Flight Centre (FCM Travel),in.fcm.travel,attendee_email,1,Krishma Sood (Director of Engineering),0,
+Greytip Software Pvt. Ltd,greytip.com,attendee_email,1,Ashok (Director of engineering),0,
+Hiver,grexit.com,attendee_email,1,Kumar Shailove (VP of Engineering),0,
+IBM,ibm.com,attendee_email,1,"Tanya Khanna (India Manager, FS Cloud)",0,
+IBM India Pvt Ltd,,not_found,1,Ritika Naik ,0,
+IDFC FIRST Bank,,not_found,1,Charan Tej G (Head of Engineering),0,
+IValue,ivalue.co.in,attendee_email,1,Nagaraj (PAM),0,
+Incred,incred.com,attendee_email,1,Vinay Kumar (Lead),0,
+Ivalue,ivalue.co.in,attendee_email,1,Jagruti D (Consultant),0,
+Ivalue Infosolutions Ltd,,not_found,1,Aysha Nathiha ( SR.Business Manager),0,
+JPMorgan Chase & Co.,quantumnblackai.in,attendee_email,1,"Ashish Kumar (Lead SRE , Vice President)",0,
+JPMorganChase,,not_found,1,Gopal Kumar  ( VP Global Technology),0,
+JioHotstar,,not_found,1,Kapil Gupta (Senior Director of Software Engineering),0,
+JumpCloud,jumpcloud.com,attendee_email,1,Sreedhar Reddy (Head of Engineering),0,
+Kipi,kipi.ai,attendee_email,1,Janaki S (Director DevOps),0,
+Kotak Mahindra Bank,kotak.com,attendee_email,1,Anil Verma (Senior Vice President of Engineering),0,
+Lemonpeak,lemonpeak.com,attendee_email,1,Umesh M (Sales head),0,
+Liberal Security,liberalsecurity.com,attendee_email,1,Sujay Gankidi (Founder),0,
+Login Radius,loginradius.com,attendee_email,1,Azharuddin Mohammed ( Sr Analyst),0,
+Lowes,,not_found,1,Biplab  (Senior Director ),0,
+Maersk,,not_found,1,Mayuri boreddy (Qa),0,
+Manasa Technologies,proton.me,attendee_email,1,SUKEERTH  (CTO (CHIEF TECHNOLOGY OFFICER) ),0,
+Mashreq Bank,mashreq.com,attendee_email,1,Badmaprasath Baskaran (AVP Technology),0,
+Merckgroup,merckgroup.com,attendee_email,1,Somnath Banerje (Head of Engineering ),0,
+Micronel Global Engineers,micronel.net,attendee_email,1,Ashwani Kumar (Executive Director),0,
+Mphasis,,not_found,1,"Arumugam K ( GCC Leader, VP & Head Digital)",0,
+NIC,nic.in,attendee_email,1,Siva Sankar (Senior Director),0,
+PayU Payments,payu.in,attendee_email,1,Raghuram Pandurangan (Associate Director ),0,
+Payu,payu.in,attendee_email,1,Anupam (EM),0,
+People Inc.,people.inc,attendee_email,1,Pawan Kumar (Director - Delivery Engineering),0,
+PwC,pwc.com,attendee_email,1,Deepak Bhattacgarya (Director),0,
+RAH Infotech Ltd,rahinfotech.com,attendee_email,1,Aravinda G A (Presales Manager),0,
+RAH infotech pvt ltd,rahinfotech.com,attendee_email,1,Manish singh (Channel sales),0,
+Radisys Corporation,radisys.com,attendee_email,1,Sunil Kumar Verma (Senior Director Of Engineering),0,
+Rah infotech,rahinfotech.com,attendee_email,1,Biswajit Saha (Product Manager ),0,
+SAMSUNG PARTNER S AND S TECH LOGIC CONCEPTS,techlogicconcepts.in,attendee_email,1,SHYAM PRASAD (CHIEF TECHNOLOGY OFFICER ),0,
+Saint fox,stfox.com,attendee_email,1,Rahul ,0,
+Saint fox Consulting private limited,stfox.com,attendee_email,1,Sathya Ganesh  (RSM),0,
+Samsung Research,,not_found,1,Praveen GS (Senior Director ),0,
+Scapia,scapia.cards,attendee_email,1,"SP Kesan (Head of SRE, Platform Engineering & AI Labs)",0,
+Schinder electric,non.se.com,attendee_email,1,Manohar Gowda (Senior application Engineering),0,
+Scientific Games India Pvt Ltd,,not_found,1,Sindhu P (Manager ),0,
+Shadowfax,shadowfax.in,attendee_email,1,Rajath VB (Devops Lead),0,
+Shadowfax technology,shadowfax.in,attendee_email,1,Abhishek K P (Devops engineer ),0,
+StateStreet Corporation,statestreet.com,attendee_email,1,Sandeep Prabhu (Vp),0,
+Techno Sportswear Pvt Ltd,technosport.in,attendee_email,1,ACHAL SHARMA (CTO),0,
+Terraterri India Pvt Ltd,terraterri.com,attendee_email,1,Meghana Reddy (Director),0,
+Traya Health,traya.health,attendee_email,1,Sandip Agarwal (CTO),0,
+Tredence Inc.,tredence.com,attendee_email,1,Sumanth B R (Director - Platform Engineering),0,
+Truvisor Technology India Pvt Ltd,truvisor.io,attendee_email,1,Livin Sunil (Technical Manager),0,
+Tuta,tuta.io,attendee_email,1, Noor Mohammed (Delivery Director),0,
+Twenty two by 7 Solutions Private Limited,22by7.in,attendee_email,1,Jagadeesh  (Associate Director ),0,
+VIYU VENTURES,viyuventures.co,attendee_email,1,Pankaj Saini (CTO),0,
+Vcraft Technologies,zohomail.in,attendee_email,1,Chandrakanthan N  (Head of IT RnD ),0,
+Yu-Pay ( YSecIT Software),ysecit.com,attendee_email,1,Himanshu Das (Head of Engineering),0,
+eSec Forte,esecforte.com,attendee_email,1,Rajat Dhawan (RSM),0,
+motorola,motorola.com,attendee_email,1,navya vijayan,0,
